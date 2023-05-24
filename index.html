@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="icon" href="./images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a id="inbox" href="#" class="nav-link">Inbox</a>
+                </li>
+                <li class="nav-item">
+                    <a id="today" href="#" class="nav-link">Today</a>
+                </li>
+                <li class="nav-item">
+                    <a id="upcoming" href="#" class="nav-link">Upcoming</a>
+                </li>
+
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+        <div class="form-container">
+            <div class="title">
+                <h1 id="page-title">ToDo</h1>
+            </div>
+            <form id="task-form">
+
+                <input type="text" id="task-title" placeholder="Add a new task...">
+                <input type="date" id="task-date">
+                <select id="task-priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <button type="submit">+</button>
+
+            </form>
+
+
+
+
+            <div id="task-list">
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
