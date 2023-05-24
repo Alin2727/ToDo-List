@@ -5,7 +5,28 @@ function createTask(title, date, priority) {
       priority,
     };
   }
-  
+
+// Save in localstorage
+const saveLocal = () => {
+  if (tasks.length > 0) {
+    localStorage.setItem('myTasks', JSON.stringify(tasks));
+  }
+};
+
+// Get from localstorage
+window.onload = function () {
+  const storedTasks = JSON.parse(localStorage.getItem('myTasks'));
+  if (storedTasks) {
+    tasks = storedTasks.map((task) => JSONToTask(task));
+  } else {
+    tasks = [];
+  }
+ 
+};
+
+function JSONToTask(taskJson) {
+  return createTask(taskJson.title, taskJson.date, taskJson.priority);
+}
 
   let tasks = [];
   
@@ -45,10 +66,11 @@ function createTask(title, date, priority) {
       <button><img class="delete-button" src="./images/trash.png" alt="delete-icon"></button>
     `;
       taskList.insertBefore(taskElement, taskList.firstChild);
-    
       taskTitle.value = '';
       taskDate.value = '';
       taskPriority.value = 'High';
+      saveLocal();
+
     });
 
 
@@ -65,6 +87,8 @@ function createTask(title, date, priority) {
 
         taskElement.addEventListener('transitionend', () => {
           taskList.removeChild(taskElement);
+          saveLocal();
+
         });
       }
     });
@@ -76,6 +100,8 @@ taskList.addEventListener('click', (e) => {
     const taskElements = e.target.closest('.task-element').querySelectorAll("span");
     taskElements.forEach(taskElement => {
       taskElement.classList.toggle('completed');
+      saveLocal();
+
     });
   }
 });
@@ -103,6 +129,8 @@ navLinks.forEach(navLink =>  {
     const clickedEl = event.target;
     const clickedElContent = clickedEl.textContent;
     pageTitle.textContent = clickedElContent;
+    saveLocal();
+
 })
 })
 
@@ -134,6 +162,8 @@ function showInboxTasks(event){
       <button><img class="delete-button" src="./images/trash.png" alt="delete-icon"></button>
     `;
     taskList.insertBefore(taskElement, taskList.firstChild);
+    saveLocal();
+
   }
     }
   
@@ -155,6 +185,8 @@ function showTodayTasks(event) {
       <button><img class="delete-button" src="./images/trash.png" alt="delete-icon"></button>
     `;
       taskList.insertBefore(taskElement, taskList.firstChild);
+      saveLocal();
+
     }
   }
 }
@@ -175,6 +207,8 @@ function showUpcomingTasks(event) {
       <button><img class="delete-button" src="./images/trash.png" alt="delete-icon"></button>
     `;
       taskList.insertBefore(taskElement, taskList.firstChild);
+      saveLocal();
+
     }
   }
 }
