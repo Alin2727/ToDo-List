@@ -74,10 +74,6 @@ function JSONToTask(taskJson) {
     });
 
 
-    
-
-
-
     taskList.addEventListener('click', (e) => {
       if (e.target.classList.contains('delete-button')) {
         const taskElement = e.target.closest('.task-element');
