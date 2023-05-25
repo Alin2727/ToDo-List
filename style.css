@@ -352,7 +352,7 @@ input#task-date {
     .navbar {
         display: flex;
         align-items: center;
-        width: 150px;
+        width: 130px;
 
     }
 
@@ -372,7 +372,7 @@ input#task-date {
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         margin: 0 auto 1rem;
-        min-width: 400px;
+        min-width: 250px;
     }
 
     .task-element {
