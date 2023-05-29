@@ -37,9 +37,6 @@ a {
     background-color: #E76161;
 }
 
-.hamburger {
-    display: none;
-}
 
 .bar {
     position: relative;
@@ -105,6 +102,8 @@ a {
 }
 
 .hamburger {
+    height: 6rem;
+    width: auto;
     display: block;
     cursor: pointer;
     margin: 0 auto;
@@ -124,6 +123,8 @@ a {
 
 
 .title {
+    display: flex;
+    justify-content: center;
     font-family: 'Righteous', cursive;
     width: 100%;
     text-align: center;
@@ -337,7 +338,7 @@ input#task-date {
 }
 
 
-@media (max-width: 770px) {
+@media (max-width: 1350px) {
 
     .title {
         font-family: 'Righteous', cursive;
@@ -351,13 +352,17 @@ input#task-date {
 
     .navbar {
         display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
-        width: 130px;
+        align-content: center;
+
+        width: 150px;
 
     }
 
     .nav-menu {
-        width: 150px;
+        width: 130px;
     }
 
     #task-form {
@@ -372,7 +377,7 @@ input#task-date {
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         margin: 0 auto 1rem;
-        min-width: 250px;
+        min-width: 350px;
     }
 
     .task-element {
@@ -392,7 +397,7 @@ input#task-date {
     .nav-item a {
         font-family: 'Amiko', sans-serif;
         color: #f9fafb;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -443,5 +448,155 @@ input#task-date {
         cursor: pointer;
         margin-right: 5px;
         transition: background-color 0.3s ease-in-out;
+    }
+
+    .task-checkbox {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f44336;
+        border-radius: 50px;
+        margin-right: auto;
+        margin-left: 7px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .task-element .delete-button {
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .title {
+        font-family: 'Righteous', cursive;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+        color: #E76161;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        width: 100px;
+
+    }
+
+    .nav-menu {
+        width: 100px;
+    }
+
+    #task-form {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 0 auto 1rem;
+        min-width: 200px;
+    }
+
+    .task-element {
+        display: flex;
+        width: auto;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.4rem;
+        margin: 0 auto 1rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-family: 'Khula', sans-serif;
+        font-size: 0.7rem;
+    }
+
+    .nav-item a {
+        font-family: 'Amiko', sans-serif;
+        color: #f9fafb;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1rem 1.5rem;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        left: auto;
+        top: 10%;
+
+    }
+
+
+
+    #task-form select,
+    input#task-date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: var(--secondary-color);
+        font-size: 1.1rem;
+        width: 100%;
+        outline: none !important;
+    }
+
+    #task-form button[type="submit"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #E76161;
+        background-color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 1px 9px;
+        font-size: 2rem;
+        cursor: pointer;
+        margin-right: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .task-checkbox {
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        border: 2px solid #f44336;
+        border-radius: 50px;
+        margin-right: auto;
+        margin-left: 7px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .task-element .delete-button {
+        width: 15px;
+        height: 15px;
+        margin-left: auto;
+        margin-right: 5px;
     }
 }
