@@ -477,7 +477,7 @@ input#task-date {
         width: 100%;
         text-align: center;
         margin: 0 auto;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         letter-spacing: 0.1rem;
         color: #E76161;
     }
@@ -488,7 +488,7 @@ input#task-date {
         justify-content: flex-start;
         align-items: center;
         align-content: center;
-        width: 100px;
+        width: 40px;
 
     }
 
@@ -503,7 +503,7 @@ input#task-date {
         gap: 1rem;
         align-items: center;
         justify-content: center;
-        padding: 1rem;
+        padding: 0.8rem;
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -525,14 +525,15 @@ input#task-date {
         font-size: 0.7rem;
     }
 
+
     .nav-item a {
         font-family: 'Amiko', sans-serif;
         color: #f9fafb;
-        font-size: 1.1rem;
+        font-size: 0.8rem;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
-        padding: 1rem 1.5rem;
+        padding: 1rem 0.2rem;
         transition: all 0.3s ease-in-out;
         width: 100%;
         margin: 0 auto;
@@ -558,12 +559,20 @@ input#task-date {
         align-items: center;
         border: none;
         border-radius: 5px;
-        padding: 10px;
+        padding: 5px;
         background-color: var(--secondary-color);
         font-size: 1.1rem;
         width: 100%;
         outline: none !important;
     }
+
+    #task-form input,
+    #task-form select,
+    #task-form option {
+        padding: 5px;
+    }
+
+
 
     #task-form button[type="submit"] {
         display: flex;
@@ -598,5 +607,17 @@ input#task-date {
         height: 15px;
         margin-left: auto;
         margin-right: 5px;
+    }
+
+    .bar {
+        position: relative;
+        top: 1rem;
+        display: block;
+        width: 40px;
+        height: 5px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #f9fafb;
     }
 }
